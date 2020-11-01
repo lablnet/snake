@@ -5,7 +5,7 @@ It is my own implementation of Snake Game in HTML 5 canvas and vanilla js.
 
 Try the game at  [https://lablnet.github.io/snake/index.html](https://lablnet.github.io/snake/index.html)
 
-**Note:**  This game is only test and targeted to Chrome v85 and Firefox v82. 
+**Note:**  This game is only test in Chrome v85 and Firefox v82. 
 
 
 ## For developers
