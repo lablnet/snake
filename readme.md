@@ -2,6 +2,13 @@
 
 It is my own implementation of Snake Game in HTML 5 canvas using vanilla js.
 
+## Demo
+
+Try the game at  [https://lablnet.github.io/snake/index.html](https://lablnet.github.io/snake/index.html)
+
+**Note:**  This game is only test and targeted to Chrome v85 and Firefox v82. 
+
+
 ## For developers
 
 In order to run it on your machine you may have to follow the following steps:
@@ -9,11 +16,6 @@ In order to run it on your machine you may have to follow the following steps:
 1.  Clone the repo using  `git clone https://github.com/lablnet/snake.git`
 2.  Open `index.html` in browser.
 
-# Demo
-
-Try the game at  [https://lablnet.github.io/snake/index.html](https://lablnet.github.io/snake/index.html)
-
-**Note:**  This game is only test and targeted to Chrome v85 and Firefox v82. 
 ## Contribution
 
 You're welcome to contribute to this project. You should follow contribution guideline  [Contribution guideline](https://github.com/lablnet/snake/blob/main/CONTRIBUTING.md)
