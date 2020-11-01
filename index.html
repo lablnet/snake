@@ -1,0 +1,19 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="stylesheet" type="text/css" href="src/css/game.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <div class="board" style="position: sticky!important;top: 0!important;">
+    <span class="score"> <b>Level: </b> <span id="level">1</span></span>
+    <span class="score"> <b>Score: </b> <span id="score">0</span></span>
+    <span class="score fa fa-volume-up" style="cursor: pointer;" id="sound"></span>
+  </div>
+  <canvas id="snakeboard" width="500" height="500"></canvas>
+</body>
+
+<script src="src/js/game.js"></script>
+</html>

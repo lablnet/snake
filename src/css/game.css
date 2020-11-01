@@ -1,0 +1,43 @@
+::-webkit-scrollbar {
+   -webkit-appearance: none;
+   display: none;
+}
+
+::-webkit-scrollbar:vertical {
+   display: none;
+}
+
+::-webkit-scrollbar:horizontal {
+   display: none;
+}
+.score {
+   border-radius: 39px;
+   background: #C4C4C4;
+   color: black;
+   padding: 25px;
+   margin-left: 12px;
+}
+.board {
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: row;
+   align-items: center;
+   text-align: center;
+   margin-top: 25px!important;
+   justify-content: center;
+   padding: 12px;
+   /* Disable selectable or dragable on image */
+   user-select: none;
+   -moz-user-select: none;
+   -webkit-user-drag: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+   /* End */
+}
+#snakeboard {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   border: 15px black dotted ;
+}
