@@ -1,6 +1,5 @@
 # Snake Game
-
-It is my own implementation of Snake Game in HTML 5 canvas using vanilla js.
+It is my own implementation of Snake Game in HTML 5 canvas and vanilla js.
 
 ## Demo
 
