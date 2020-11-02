@@ -10,7 +10,12 @@ const DefaultSnake = [
     {x: 160, y: 200},
 ];
 let snake = DefaultSnake;
-var start = false, Sound = true;
+let start = false, Sound = true;
+let xTouchDown, yTouchDown;
+
+const getTouches = (event) => {
+    return event.touches;
+}
 
 const levels = [
     // level 1
@@ -197,6 +202,45 @@ const changeDirection = (event) => {
     }
 }
 
+const handleTouchStart = (event) => {
+    const firstTouch = getTouches(event)[0];                                      
+    xTouchDown = firstTouch.clientX;                                      
+    yTouchDown = firstTouch.clientY;                                      
+}
+const handleTouchMove = (event) => {
+    if (!xTouchDown || !yTouchDown) return;
+    let xTouchUp = event.touches[0].clientX;
+    let yTouchUp = event.touches[0].clientY;
+
+    var xDiff = xTouchDown - xTouchUp;
+    var yDiff = yTouchDown - yTouchUp;
+    const goingUp = dy === -10;
+    const goingDown = dy === 10;
+    const goingRight = dx === 10;  
+    const goingLeft = dx === -10;
+    if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {
+        if ( xDiff > 0 && !goingRight) {
+            dx = -10;
+            dy = 0; 
+        } else if (xDiff < 0 && !goingLeft) {
+            dx = 0;
+            dy = -10;
+        }                       
+    } else {
+        if ( yDiff > 0 && !goingDown) {
+            dx = 10;
+            dy = 0; 
+        } else if (yDiff < 0 && !goingUp) { 
+            dx = 0;
+            dy = 10;
+        }                                                                 
+    }
+
+    /* reset values */
+    xTouchDown = null;
+    yTouchDown = null;
+}
+
 // determine game ended?, snake collied with wall or self?
 const hasGameEnded = () => {
     // self collision.
@@ -316,8 +360,12 @@ const gameInitBoard = () => {
     gameScreenBoard("Click anywhere to play");
 }
 
-// event lisner to handle key events.
+// event listener to handle key events.
 document.addEventListener("keydown", changeDirection);
+
+// event to handle touch moves
+document.addEventListener('touchstart', handleTouchStart, false);        
+document.addEventListener('touchmove', handleTouchMove, false);
 
 // inital game board.
 gameInitBoard();
