@@ -21,6 +21,8 @@ You're welcome to contribute to this project. You should follow contribution gui
 
 ## Known Issues
 1. when game over, it does not play again on click user have to refresh page.
+2. Sometimes the snake behaves unexpectedly.
+3. Not working properly in mobile.
 
 ## License
 
